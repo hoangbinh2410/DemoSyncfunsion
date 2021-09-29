@@ -1,0 +1,92 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Syncfusion.Xamarin.Expander" Version="19.2.0.62" />
+    <PackageReference Include="Syncfusion.Xamarin.SfDataForm" Version="19.2.0.62" />
+    <PackageReference Include="Syncfusion.Xamarin.SfGauge" Version="19.2.0.62" />
+    <PackageReference Include="Syncfusion.Xamarin.SfImageEditor" Version="19.2.0.62" />
+    <PackageReference Include="Syncfusion.Xamarin.SfKanban" Version="19.2.0.62" />
+    <PackageReference Include="Syncfusion.Xamarin.SfListView" Version="19.2.0.62" />
+    <PackageReference Include="Syncfusion.Xamarin.SfMaskedEdit" Version="19.2.0.62" />
+    <PackageReference Include="Syncfusion.Xamarin.SfNumericTextBox" Version="19.2.0.62" />
+    <PackageReference Include="Syncfusion.Xamarin.SfNumericUpDown" Version="19.2.0.62" />
+    <PackageReference Include="Syncfusion.Xamarin.SfParallaxView" Version="19.2.0.62" />
+    <PackageReference Include="Syncfusion.Xamarin.SfPicker" Version="19.2.0.62" />
+    <PackageReference Include="Syncfusion.Xamarin.SfPopupLayout" Version="19.2.0.62" />
+    <PackageReference Include="Syncfusion.Xamarin.SfPullToRefresh" Version="19.2.0.62" />
+    <PackageReference Include="Syncfusion.Xamarin.SfRadialMenu" Version="19.2.0.62" />
+    <PackageReference Include="Syncfusion.Xamarin.SfRangeSlider" Version="19.2.0.62" />
+    <PackageReference Include="Syncfusion.Xamarin.SfRating" Version="19.2.0.62" />
+    <PackageReference Include="Xamarin.Forms" Version="4.8.0.1364" />
+    <PackageReference Include="Xamarin.Essentials.Interfaces" Version="1.5.3.2" />
+    <PackageReference Include="Prism.DryIoc.Forms" Version="8.0.0.1909" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Views\demoDataForm.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\DemoDatePicker.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\DemoDigitalGauge.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\DemoEffectView.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\DemoExpander.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\DemoGradientView.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\DemoImageEditor.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\DemoKanban.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\DemoMaskEdit.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\DemoNumericTextBox.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\DemoPopupLayout.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\DemoPullRefresh.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\DemoRadialMenu.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\DemoRadioButton.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\DemoRangeSlider.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\DemoRating.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\DemoSegmentControl.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\DemoShimmer.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\NumericUpdown.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\ParallaxView.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+
+</Project>

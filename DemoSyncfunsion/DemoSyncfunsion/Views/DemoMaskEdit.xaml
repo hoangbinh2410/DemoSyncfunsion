@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:prism="http://prismlibrary.com"
+             xmlns:syncmaskededit="clr-namespace:Syncfusion.XForms.MaskedEdit;assembly=Syncfusion.SfMaskedEdit.XForms"
+             prism:ViewModelLocator.AutowireViewModel="True"
+             x:Class="DemoSyncfunsion.Views.DemoMaskEdit">
+    <StackLayout>
+        <syncmaskededit:SfMaskedEdit x:Name="maskedEdit" Mask="00/00/0000" PromptChar="*" ReturnType="Next"/>
+        <!--Aan tro giup--> 
+        <syncmaskededit:SfMaskedEdit  Mask="00/00/0000" PromptChar="*" ReturnType="Go" HidePromptOnLeave="True"/>
+        <syncmaskededit:SfMaskedEdit Mask="\w+@\w+\.\w+" MaskType="RegEx" ReturnType="Search"/>
+    </StackLayout>
+</ContentPage>

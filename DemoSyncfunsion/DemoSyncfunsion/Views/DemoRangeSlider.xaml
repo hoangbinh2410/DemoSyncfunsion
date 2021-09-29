@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:prism="http://prismlibrary.com"
+             xmlns:range="clr-namespace:Syncfusion.SfRangeSlider.XForms;assembly=Syncfusion.SfRangeSlider.XForms"
+             prism:ViewModelLocator.AutowireViewModel="True"
+             x:Class="DemoSyncfunsion.Views.DemoRangeSlider">
+    <StackLayout>
+        <range:SfRangeSlider x:Name="rangeslider" Orientation="Horizontal" SnapsTo="StepValues" TickColor="#FFFFFF"/>
+
+        <range:SfRangeSlider x:Name="rangeSlider1" LabelFormat="Money: {0:c}" HeightRequest="90" WidthRequest="200" Minimum="0" Maximum="12" RangeStart="0" RangeEnd="12" TickFrequency="2"/>
+    </StackLayout>
+    
+</ContentPage>

@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:prism="http://prismlibrary.com"
+             xmlns:shimmer="clr-namespace:Syncfusion.XForms.Shimmer;assembly=Syncfusion.Core.XForms"
+             prism:ViewModelLocator.AutowireViewModel="True"
+             x:Class="DemoSyncfunsion.Views.DemoShimmer">
+    <StackLayout>
+        <shimmer:SfShimmer x:Name="shimmer" VerticalOptions="Fill"
+                           IsActive="{Binding IsActive}">
+            <shimmer:SfShimmer.Content>
+                <StackLayout>
+                    <Label Text="Content is loaded!" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"/>
+                </StackLayout>
+            </shimmer:SfShimmer.Content>
+        </shimmer:SfShimmer>
+        <shimmer:SfShimmer x:Name="shimmer" VerticalOptions="FillAndExpand" Color="#F4E2EE">
+            <shimmer:SfShimmer.Content>
+                <StackLayout>
+                    <Label Text="Content is loaded!"/>
+                </StackLayout>
+            </shimmer:SfShimmer.Content>
+        </shimmer:SfShimmer>
+    </StackLayout>
+</ContentPage>

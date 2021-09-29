@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:prism="http://prismlibrary.com"
+             xmlns:syncEffectsView="clr-namespace:Syncfusion.XForms.EffectsView;assembly=Syncfusion.Core.XForms"
+             prism:ViewModelLocator.AutowireViewModel="True"
+             x:Class="DemoSyncfunsion.Views.DemoEffectView">
+    <StackLayout HeightRequest="100" WidthRequest="100" BackgroundColor="Aqua">
+        <syncEffectsView:SfEffectsView
+    FadeOutRipple="True"   
+    Angle="180"
+    TouchDownEffects="Highlight,Ripple"
+    TouchUpEffects="Scale"
+    LongPressEffects="Scale"
+    >
+            <StackLayout HeightRequest="40" WidthRequest="40">
+                <Label Text="Image"/>
+            </StackLayout>
+        </syncEffectsView:SfEffectsView>
+    </StackLayout>
+   
+</ContentPage>

@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:prism="http://prismlibrary.com"
+             xmlns:kanban="clr-namespace:Syncfusion.SfKanban.XForms;assembly=Syncfusion.SfKanban.XForms"
+             prism:ViewModelLocator.AutowireViewModel="True"
+             x:Class="DemoSyncfunsion.Views.DemoKanban">
+    <StackLayout>
+        <kanban:SfKanban x:Name="kanban" AutoGenerateColumns="False" 
+                         ColumnMappingPath="Group"
+                         HorizontalOptions="FillAndExpand" 
+                         VerticalOptions="FillAndExpand" 
+                         ItemsSource="{Binding Cards}">
+
+            <kanban:SfKanban.Columns>
+
+                <kanban:KanbanColumn x:Name="openColumn" Title="To Do" Categories="{Binding Kanban1}">\
+                    
+                </kanban:KanbanColumn>
+
+                <kanban:KanbanColumn x:Name="progressColumn" Title="In Progress" >
+                </kanban:KanbanColumn>
+
+                <kanban:KanbanColumn x:Name="codeColumn" Title="Code Review" >
+                </kanban:KanbanColumn>
+
+                <kanban:KanbanColumn x:Name="doneColumn" Title="Done"  >
+                </kanban:KanbanColumn>
+
+            </kanban:SfKanban.Columns>
+            <!--<kanban:SfKanban.PlaceholderStyle >
+
+                <kanban:KanbanPlaceholderStyle FontSize="16"
+              TextColor="Green"
+              BackgroundColor="Fuchsia"
+              BorderColor="Fuchsia"
+              BorderThickness="2"
+
+SelectedFontSize="16"
+SelectedTextColor="Red"
+SelectedBorderColor="Yellow"
+SelectedBorderThickness="2"
+SelectedBackgroundColor="Green">
+                </kanban:KanbanPlaceholderStyle>
+
+            </kanban:SfKanban.PlaceholderStyle>-->
+            <kanban:SfKanban.CardTemplate >
+
+                <DataTemplate>
+                    <StackLayout WidthRequest="250" Orientation="Vertical" BackgroundColor="Gray" Padding="10,10,10,10">
+
+                        <StackLayout  Orientation="Horizontal">
+
+                            <Label Text="{Binding Path=Title}" TextColor="Silver" HorizontalOptions="StartAndExpand" >
+                            </Label>
+
+                        </StackLayout>
+
+                        <StackLayout  Orientation="Horizontal">
+
+                            <Label Text="{Binding Description}" WidthRequest="150" FontSize="14" TextColor="Silver" LineBreakMode="WordWrap" ></Label>
+                            <Image Source="{Binding ImageURL}" HeightRequest="50" WidthRequest="50"  ></Image>
+
+                        </StackLayout>
+
+                    </StackLayout>
+                </DataTemplate>
+
+            </kanban:SfKanban.CardTemplate>
+
+        </kanban:SfKanban>
+    </StackLayout>
+</ContentPage>

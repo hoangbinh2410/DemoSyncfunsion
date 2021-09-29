@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:prism="http://prismlibrary.com"
+             prism:ViewModelLocator.AutowireViewModel="True"
+             x:Class="DemoSyncfunsion.Views.DemoSegmentControl">
+    <buttons:SfSegmentedControl 
+            x:Name="Segment" 
+            SelectionTextColor= "White"
+            HeightRequest="80"
+            VisibleSegmentsCount="5"
+            Color="Transparent" 
+            BorderColor="#929292"
+            SelectedIndex="0" 
+            FontColor="#929292"
+            BackgroundColor="Transparent"
+            ItemsSource="{Binding ItemCollection,Mode=TwoWay}">
+        <buttons:SfSegmentedControl.Behaviors>
+            <local:EventToCommandBehavior Command="{Binding SelectionChangedCommand}" EventName="SelectionChanged"/>
+        </buttons:SfSegmentedControl.Behaviors>
+    </buttons:SfSegmentedControl>
+</ContentPage>

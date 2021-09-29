@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:prism="http://prismlibrary.com"
+             xmlns:sfPopup="clr-namespace:Syncfusion.XForms.PopupLayout;assembly=Syncfusion.SfPopupLayout.XForms"
+             prism:ViewModelLocator.AutowireViewModel="True"
+             x:Class="DemoSyncfunsion.Views.DemoPopupLayout">
+    <StackLayout>
+        <sfPopup:SfPopupLayout x:Name="popupLayout" >
+            <sfPopup:SfPopupLayout.PopupView>
+                <sfPopup:PopupView AnimationMode="Zoom" HeaderTitle="Modal Window"
+                           ShowFooter="False">
+                    <sfPopup:PopupView.ContentTemplate>
+                        <DataTemplate>
+                            <Label Text="Window loads under the parent window surrounded by an 
+                           overlay which prevents clicking anywhere else on the screen 
+                           apart from the control of the modal. Modal opens in the same 
+                           window. It also does not require any user action to open, and 
+                           give callbacks when closing or opening the modal."
+                           WidthRequest="260"
+                           BackgroundColor="White"
+                           HorizontalOptions="FillAndExpand"
+                           />
+                        </DataTemplate>
+                    </sfPopup:PopupView.ContentTemplate>
+                </sfPopup:PopupView>
+            </sfPopup:SfPopupLayout.PopupView>
+            <sfPopup:SfPopupLayout.Content>
+                <StackLayout x:Name="layout">
+                    <Button x:Name="clickToShowPopup" Text="ClickToShowPopup" 
+               VerticalOptions="Start"   HorizontalOptions="FillAndExpand" Command="{Binding Clickedbnt}" />
+                </StackLayout>
+            </sfPopup:SfPopupLayout.Content>
+        </sfPopup:SfPopupLayout>
+    </StackLayout> 
+</ContentPage>

@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:parallax="clr-namespace:Syncfusion.XForms.ParallaxView;assembly=Syncfusion.SfParallaxView.XForms"
+             xmlns:prism="http://prismlibrary.com"
+             xmlns:syncfusion="clr-namespace:Syncfusion.ListView.XForms;assembly=Syncfusion.SfListView.XForms"
+             prism:ViewModelLocator.AutowireViewModel="True"
+             x:Class="DemoSyncfunsion.Views.ParallaxView">
+    <Grid>
+        <parallax:SfParallaxView x:Name="parallaxview" Speed="0.5">
+            <parallax:SfParallaxView.Content>
+                <Image Source="girl2" BackgroundColor="Transparent" HorizontalOptions="Fill" VerticalOptions="Fill" Aspect="AspectFill"  />
+            </parallax:SfParallaxView.Content>
+        </parallax:SfParallaxView>
+        <syncfusion:SfListView x:Name="listview" ItemsSource="{Binding Item}"  BackgroundColor="Transparent" ItemSize="100">
+            <syncfusion:SfListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Grid Padding="20,0,20,0" RowSpacing="50">
+                            <StackLayout BackgroundColor="Transparent" Grid.Column="1" Padding="0,0,0,0" VerticalOptions="CenterAndExpand" HorizontalOptions="StartAndExpand" Orientation="Vertical">
+                                <Label HorizontalOptions="Start" TextColor="White" Text="{Binding Name}" Font="25">
+                                </Label>
+                                <Label HorizontalOptions="Start" Text="{Binding Author}" TextColor="White">
+                                </Label>
+                            </StackLayout>
+                        </Grid>
+                    </ViewCell>
+                </DataTemplate>
+            </syncfusion:SfListView.ItemTemplate>
+        </syncfusion:SfListView>
+    </Grid>
+</ContentPage>

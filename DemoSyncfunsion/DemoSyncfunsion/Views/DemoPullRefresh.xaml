@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:prism="http://prismlibrary.com"
+             xmlns:syncfusion="clr-namespace:Syncfusion.SfPullToRefresh.XForms;assembly=Syncfusion.SfPullToRefresh.XForms"
+             prism:ViewModelLocator.AutowireViewModel="True"
+             x:Class="DemoSyncfunsion.Views.DemoPullRefresh">
+    <syncfusion:SfPullToRefresh x:Name="pullToRefresh"
+                                    IsRefreshing="False" 
+                                    PullingThreshold="100"
+                                    TransitionMode="Push"
+                                
+                                    RefreshCommand="{Binding RefreshData}"
+                                    RefreshContentHeight="30"
+                                    RefreshContentThreshold="30"
+                                    RefreshContentWidth="30">
+        <syncfusion:SfPullToRefresh.PullableContent>
+            <StackLayout BackgroundColor="#00AFF9" Orientation="Vertical">
+                <Label Text="New York Temperature" FontSize="Large" TextColor="White" HorizontalTextAlignment="Center" Margin="20"/>
+                <Image  WidthRequest="100" HorizontalOptions="Center" HeightRequest="100"  Margin="20" Source="GettingStarted/warmselected.png"/>
+                <Label x:Name="weatherData" FontSize="Large" TextColor="White" HorizontalTextAlignment="Center" Margin="20"/>
+            </StackLayout>
+        </syncfusion:SfPullToRefresh.PullableContent>
+    </syncfusion:SfPullToRefresh>
+</ContentPage>

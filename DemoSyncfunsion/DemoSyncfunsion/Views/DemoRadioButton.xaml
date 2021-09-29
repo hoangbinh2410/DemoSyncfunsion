@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:syncfusion="clr-namespace:Syncfusion.XForms.Buttons;assembly=Syncfusion.Buttons.XForms" 
+             xmlns:prism="http://prismlibrary.com"
+             prism:ViewModelLocator.AutowireViewModel="True"
+             x:Class="DemoSyncfunsion.Views.DemoRadioButton">
+    <!--Su dung ischeck de kiem tra-->
+    <syncfusion:SfRadioGroup >
+        <syncfusion:SfRadioButton Text="Net banking" IsChecked="False" />
+        <syncfusion:SfRadioButton Text="Debit card" />
+        <syncfusion:SfRadioButton Text="Credit card" />
+    </syncfusion:SfRadioGroup>
+</ContentPage>

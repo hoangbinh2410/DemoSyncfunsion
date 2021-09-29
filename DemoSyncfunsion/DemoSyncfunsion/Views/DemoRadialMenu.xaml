@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:prism="http://prismlibrary.com"
+             xmlns:radialMenu="clr-namespace:Syncfusion.SfRadialMenu.XForms;assembly=Syncfusion.SfRadialMenu.XForms"
+             prism:ViewModelLocator.AutowireViewModel="True"
+             x:Class="DemoSyncfunsion.Views.DemoRadialMenu">
+    <StackLayout>
+        <radialMenu:SfRadialMenu CenterButtonText="Edit" 
+                             CenterButtonFontSize="12">
+            <radialMenu:SfRadialMenu.Items>
+                <radialMenu:SfRadialMenuItem Text="Bold" 
+                                         FontSize="12"/>
+                <radialMenu:SfRadialMenuItem Text="Copy" 
+                                         FontSize="12"/>
+                <radialMenu:SfRadialMenuItem Text="Undo" 
+                                         FontSize="12"/>
+                <radialMenu:SfRadialMenuItem Text="Paste" 
+                                         FontSize="12"/>
+                <radialMenu:SfRadialMenuItem Text="Color" FontSize="12">
+                    <radialMenu:SfRadialMenuItem.Items>
+                        <radialMenu:SfRadialMenuItem Text="Font" 
+                                                 FontSize="12" 
+                                                 ItemWidth="50"/>
+                        <radialMenu:SfRadialMenuItem Text="Gradient" 
+                                                 FontSize="12" 
+                                                 ItemWidth="50"/>
+                        <radialMenu:SfRadialMenuItem Text="Highlight" 
+                                                 FontSize="12" 
+                                                 ItemWidth="50"/>
+                    </radialMenu:SfRadialMenuItem.Items>
+                </radialMenu:SfRadialMenuItem>
+            </radialMenu:SfRadialMenu.Items>
+        </radialMenu:SfRadialMenu>
+        <!--Dung list-->
+        <radialMenu:SfRadialMenu 
+            x:Name="radial_Menu" 
+            ItemsSource="{Binding EmployeeCollection}">
+            <radialMenu:SfRadialMenu.ItemTemplate>
+                <DataTemplate>
+                    <StackLayout>
+                        <Image Source="user.png" 
+                               HorizontalOptions="Center" 
+                               WidthRequest="15"/>
+                        <Label Text="{Binding EmployeeName}" 
+                               HorizontalTextAlignment="Center" 
+                               VerticalTextAlignment="Center"/>
+                    </StackLayout>
+                </DataTemplate>
+            </radialMenu:SfRadialMenu.ItemTemplate>
+        </radialMenu:SfRadialMenu>
+    </StackLayout>
+</ContentPage>
